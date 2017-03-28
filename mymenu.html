@@ -1,0 +1,27 @@
+<!-- Menu -->
+<ion-fab bottom right (click)="showMenuItems()" #fab>
+  <button ion-fab ><ion-icon name="add"></ion-icon></button>
+  <ion-fab-list side="top">
+
+	<button ion-fab color="primary" *ngIf="condition1" (click)="action1()">
+	  <ion-icon name="alarm"></ion-icon>
+	</button>
+
+	<button ion-fab color="primary" *ngIf="condition2" (click)="action2()">
+	  <ion-icon name="american-football"></ion-icon>
+	</button>
+
+	<button ion-fab color="primary" *ngIf="condition3" (click)="action3()">
+	  <ion-icon name="aperture"></ion-icon>
+	</button>
+  </ion-fab-list>
+</ion-fab>
+
+<!-- menu items -->
+<a (click)="hideMenuFab()" class="labelContainer" #container>
+	<div class="container">
+	  <a (click)="action3()"><div #label class="label" *ngIf="condition3"> Do something 3</div></a>
+	  <a (click)="action2()"><div #label class="label" *ngIf="condition2)">Do something 2</div></a>
+	  <a (click)="action1()"><div #label class="label" *ngIf="condition1">Do something 1</div></a>
+	</div>
+</a>
