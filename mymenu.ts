@@ -47,7 +47,7 @@ export class MyMenu {
 
   showMenuItems() {
 
-	this.showMenuItem = !this.showMenuItem;
+	this.showMenuItem = this.fab._listsActive;
 
 	if(this.showMenuItem){
 	  this._renderer.setElementClass(this.container.nativeElement, "show", true);
