@@ -42,7 +42,7 @@ export class MyMenu {
   }
 
   hideMenuFab() {
-	setTimeout(() => { this.fab.close(); }, 200);
+	setTimeout(() => { this.fab.close(); this.showMenuItems();}, 200);
   }
 
   showMenuItems() {
