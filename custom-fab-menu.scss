@@ -1,0 +1,49 @@
+custom-fab-menu {
+  .labelContainer {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	z-index:99;
+  	background-color: rgba(255, 255, 255, 0.5);
+
+  	.container{
+  	  position: absolute;
+  	  bottom: $fab-content-margin * 3.4 + $fab-size;
+  	  right: $fab-content-margin + $fab-size;
+  	}
+
+  	opacity: 0;
+  	visibility: hidden;
+  }
+
+  .labelContainer.show {
+  	opacity: 1;
+  	visibility: visible;
+  }
+
+  .label{
+  	text-align: left;
+  	color:color($colors, primary);
+  	background: $fab-list-button-background-color;
+  	-webkit-border-radius: 8px;
+  	-moz-border-radius: 8px;
+  	border-radius: 8px;
+  	padding: 7px;
+  	margin-top: ($fab-list-margin * 2.5);
+  	margin-right: 0px;
+  	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.14), 0 2px 3px rgba(0, 0, 0, 0.1);
+  	opacity: 0;
+  	visibility: hidden;
+  	transform: scale(0);
+  }
+
+  .label.show{
+  	opacity: 1;
+  	visibility: visible;
+  	transform: scale(1);
+  	transition: all ease-in-out 200ms;
+  	transition-property: transform, opacity;
+  }
+}

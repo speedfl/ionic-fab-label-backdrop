@@ -1,0 +1,17 @@
+<!-- Menu -->
+<ion-fab bottom right (click)="showMenuItems()" #fab>
+  <button ion-fab color="primary"><ion-icon *ngIf="fabIcon" name={{fabIcon}}></ion-icon></button>
+  <ion-fab-list side="top">
+
+	<button *ngFor="let item of items" ion-fab color="primary" (click)="action(item)">
+	  <ion-icon color="light" name={{item.icon}}></ion-icon>
+	</button>
+  </ion-fab-list>
+</ion-fab>
+
+<!-- menu items -->
+<a (click)="hideMenuFab()" class="labelContainer" #container>
+	<div class="container">
+	  <a  *ngFor="let item of items.reverse();" (click)="action(item)"><div #label class="label">{{item.label}}</div></a>
+	</div>
+</a>
